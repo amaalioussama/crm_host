@@ -30,13 +30,13 @@ Route::get('/', function () {
 // Route::delete('/employee/{id}', [AdminController::class, 'destroy'])->name('employee.delete');
 // Middleware to protect profile routes
 
-Route::middleware(['auth'])->get('/user/dashboard', [UserController::class, 'index'])->name('user.dashboard');
+Route::get('/user/dashboard', [UserController::class, 'index'])->name('user.dashboard');
 
 // Admin dashboard route (Role = 1)
-Route::middleware(['auth'])->get('/dashboard', [AdminController::class, 'index'])->name('dashboard');
+Route::get('/dashboard', [AdminController::class, 'index'])->name('dashboard');
 
 // Redirect based on session
-Route::middleware(['auth'])->get('/redirect', [RedirectController::class, 'redirect'])->name('redirect');
+Route::get('/redirect', [RedirectController::class, 'redirect'])->name('redirect');
 
 
 // Additional routes for employees and profile management
