@@ -5,7 +5,7 @@
         </h2>
     </x-slot>
 
-    <div class="flex items-center justify-center  bg-gray-100 mt-9">
+    <div class="flex items-center justify-center bg-gray-100 mt-9">
         <div class="w-full max-w-md bg-white p-8 rounded-lg shadow-lg">
             <div class="text-center mb-6">
                 <h3 class="text-2xl font-semibold text-gray-800">Welcome, {{ Auth::user()->username }}!</h3>
