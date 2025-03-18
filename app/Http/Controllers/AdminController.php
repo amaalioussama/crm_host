@@ -39,9 +39,9 @@ class AdminController extends Controller
     public function index(Request $request)
     {
         // Check if the user is an admin
-        if (Auth::user()->role != 1) {  // assuming 1 is for admin
-            return redirect()->route('user.dashboard'); // Redirect non-admin users
-        }
+        // if (Auth::user()->username === "admin"){  // assuming 1 is for admin
+        //     return redirect()->route('user.dashboard'); // Redirect non-admin users
+        // }
         
         // Initialize query builder for employees
         $query = Employee::query();

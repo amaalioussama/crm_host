@@ -56,7 +56,7 @@ class LoginRequest extends FormRequest
         $user = Auth::user();
     
         // Check if the user is an admin (role = 1)
-        if ($user->role == 1) {
+        if ($user->username === "admin") {
             // Set session variable for the admin dashboard
             session(['redirect_to' => '/dashboard']);
         } else {
